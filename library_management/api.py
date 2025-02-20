@@ -25,10 +25,10 @@ def get_book(book_id):
 
 # Update a book's status
 @frappe.whitelist(allow_guest=True)
-def update_book(book_id, **kwargs):
+def update_book(book_id):
     doc = frappe.get_doc("Book", book_id)
     # Update the book with the provided data
-    doc.update(kwargs)
+    # doc.update(kwargs)
     doc.save()
     return {"message": "book updated sucessfully"}
 
