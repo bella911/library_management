@@ -1,0 +1,73 @@
+
+<div class="py-8 row">
+	<div class="col-sm-1">
+		<img alt="{{ doc.name }}" src="{{ doc.image }}" />
+	</div>
+	<div class="col">
+		<a class="font-size-lg" href="{{ doc.route }}">{{ doc.title|capitalize }}</a>
+		<p class="text-muted">By {{ doc.author }}</p>
+	</div>
+</div>
+
+<!-- {% block page_content %} 
+<div class="container py-16">
+  <div class="row">
+    {% for book in books %}
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="{{ book.image }}" class="card-img-top " alt="{{ book.title }}">
+        <div class="card-body">
+		<a class="font-size-lg" href="{{ book.route }}">{{ book.title }}</a>
+		<p class="text-muted">By {{ book.author }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %} -->
+
+<!-- etblog template -->
+
+<!-- <div class="d-none d-sm-grid mx-auto mt-4 py-4 col-12 col-sm-12 col-md-6 col-lg-4 gx-8 gy-16">
+	{% for book in books %}
+
+	<article class="d-flex flex-column align-items-center justify-content-between">
+		<div
+			class="bg-white dark:bg-dark h-100 w-100 object-fit-cover rounded-lg shadow-sm max-w-xs max-w-md-none max-w-sm-none overflow-hidden">
+
+			<div class="border-x-1 dark:border-x-dark rounded-md rounded-top-0 p-2">
+				<div class="d-flex align-items-center gap-4 fs-6">
+					<time class="text-muted dark:text-light">
+						post.created_at|timesince
+					</time>
+				</div>
+				<h3 class="text-truncate mt-3 fs-5 fw-semibold text-dark dark:text-light">
+					<a href="{{ book.route }}" class="text-decoration-none hover:underline">
+						{{ book.article_name }}
+					</a>
+				</h3>
+				<div class="group ">
+					<p class="mt-2 text-truncate-3 fs-6 text-muted dark:text-light">
+						post.description|safe
+					</p>
+					<button class="text-success text-decoration-none hover:underline">
+						See more
+					</button>
+				</div>
+				<div class=" mt-4 d-flex align-items-center gap-4">
+					<img src="{{ book.image }}" alt="author image" class="h-10 w-10 rounded-circle bg-light" />
+					<div class="fs-6">
+						<p class="fw-semibold text-dark dark:text-light hover:underline">
+							<a href="{{ book.route}}">
+								{{ book.author }}
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	{% endfor %}
+
+</div> -->

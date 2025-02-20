@@ -1,0 +1,37 @@
+{%  extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="py-20 row">
+  <div class="col-sm-2">
+    <img alt="{{ title }}" src="{{ image }}"/>
+  </div>
+  <div class="col">
+    <h1>{{ title|capitalize }}</h1>
+    <p class="lead px-4"> By {{ author }}</p>
+    <div>
+      {%- if status == 'Available' -%}
+        <span class="badge badge-success p-1">Available</span>
+      {%- elif status == 'Issued' -%}
+        <span class="badge badge-primary">Issued</span>
+
+      {%- endif -%}
+    </div>
+
+    <div class="mt-4">
+      <div>Publish Date: <strong>{{ publish_date }}</strong></div>
+      <div>ISBN: <strong>{{ isbn }}</strong></div>
+    </div>
+    <p>{{ description }}</p>
+    <div>
+    {%- if status == 'Available' -%}
+    <a href="/loan-book/new">
+      <button class="btn btn-success px-4 py-2 rounded-lg">Loan Book</button>
+    <!-- </a> -->
+        
+        {%- endif -%}
+    </div>
+     </div>
+</div>
+
+{% endblock %}

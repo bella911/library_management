@@ -1,0 +1,63 @@
+<!-- overdue_books.html -->
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<!-- <div class="container">
+  <h1>Overdue Books</h1> -->
+  
+  <!-- Display List of Overdue Books -->
+  <!-- <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Issued To</th>
+        <th scope="col">Return Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for book in overdue_books %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ book.title }}</td>
+        <td>{{ book.issued_to }}</td>
+        <td>{{ book.return_date }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div> -->
+
+
+
+<div class="container">
+    <h3 class="text-center py-6">Total Loaned books = {{total_loaned_books}}</h3> 
+   
+   <table class="table table-bordered table-striped">
+     <thead class="thead-dark">
+       <tr>
+         <th scope="col">#</th>
+         <th scope="col">Book Name</th>
+         <th scope="col">Issued To</th>
+         <th scope="col">Return Date</th>
+       </tr>
+     </thead>
+     <tbody>
+       {% for issue in book_issues %}
+       <tr>
+         <th scope="row">{{ loop.index }}</th>
+         <td>{{ issue.title }}</td>
+         <td>{{ issue.issued_to }}</td>
+         <td>{{ issue.publish_date }}</td>
+       </tr>
+       {% endfor %}
+     </tbody>
+   </table>
+ </div>
+ 
+    <h3 class="text-center py-6">Total Loaned books = {{total_overdue_books}}</h3> 
+ 
+ 
+
+{% endblock %}
+

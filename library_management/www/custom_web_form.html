@@ -1,0 +1,17 @@
+<!-- your_app/www/custom_web_form.html -->
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container">
+  <h1>Custom Web Form</h1>
+  
+  <!-- Your web form content goes here -->
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

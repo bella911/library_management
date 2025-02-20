@@ -1,0 +1,36 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2025-02-19 22:14:14.845861",
+ "date_changed": "return_date",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Loan",
+ "enabled": 1,
+ "event": "Days After",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Add your message here</p>\n",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2025-02-20 02:02:56.975756",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Overdue books",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "",
+   "receiver_by_role": "Member"
+  },
+  {
+   "condition": "doc.return_date < frappe.utils.today() and doc.type != ",
+   "receiver_by_role": "Librarian"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "The book {{doc.member}} has exceeded Due Date."
+}

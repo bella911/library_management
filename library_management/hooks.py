@@ -245,3 +245,53 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+
+
+
+
+
+# demo login/signup routes for html files
+# from frappe.utils import get_site_url
+
+# def get_website_routes(context):
+#     return [
+#         {
+#             "from_route": "/form",
+#             "to_route": "book_form.html",
+#             "type": "template"
+#         },]
+
+# this also continious from above test
+# def get_website_context(context):
+#     context.update({
+#         "app_include_js": "my_app.bundle.js",
+#         "app_include_css": "my_app.bundle.css"
+#     })
+
+
+
+
+
+
+
+website_route_rules = [
+    {"from_route": "/my-page", "to_route": "my_page"},
+    # {"from_route": "/add-book", "to_route": "add_book"},
+    {"from_route": "/api", "to_route": "api"},
+        {"from_route": "/report", "to_route": "report"},
+        {"from_route": "/hello-world", "to_route": "hello_world"},
+
+]
+
+
+# custom api test
+app_include_js = "/assets/your_app/js/your_script.js"
+
+# Define custom API routes
+api_routes = [
+    {"method": "POST", "path": "api/method/library_management.api.create_transaction"},
+    {"method": "GET", "path": "api/method/library_management.api.get_transaction"},
+    {"method": "PUT", "path": "api/method/library_management.api.update_transaction"},
+    {"method": "DELETE", "path": "api/method/library_management.api.delete_transaction"},
+]

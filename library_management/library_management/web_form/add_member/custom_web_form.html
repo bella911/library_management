@@ -1,0 +1,96 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+	<div class="container">
+		<a class="navbar-brand" href="/"
+			><img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHdWBWraTLg5Z56fYgJkfS8ZTpfzQ5vvcaxw&amp;s"
+			/>
+			LMS</a
+		>
+		<button
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+			class="navbar-toggler"
+			data-target="#navbarSupportedContent"
+			data-toggle="collapse"
+			type="button"
+		>
+			<span>
+				<svg class="icon icon-lg">
+					<use href="#icon-menu"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="mr-auto navbar-nav"></ul>
+			<ul class="ml-auto navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/report"> Report </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/add-book/new"> Add Book </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/add-member/new"> Add Member </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/loaned-books"> Loaned Books </a>
+				</li>
+				<!-- post login tools -->
+				<li
+					class="nav-item dropdown logged-in"
+					data-label="website-post-login"
+					id="website-post-login"
+					style=""
+				>
+					<a class="nav-link nav-avatar" data-toggle="dropdown" href="#">
+						<span class="user-image-wrapper"
+							><span
+								class="avatar avatar-medium filterable"
+								data-filter="_assign,like,%null%"
+								title="Administrator"
+							>
+								<div
+									class="avatar-frame standard-image"
+									style="
+										background-color: var(--dark-green-avatar-bg);
+										color: var(--dark-green-avatar-color);
+										--darkreader-inline-bgcolor: var(
+											--darkreader-bg--dark-green-avatar-bg,
+											var(--darkreader-background-ffffff, #181a1b)
+										);
+										--darkreader-inline-color: var(
+											--darkreader-text--dark-green-avatar-color,
+											var(--darkreader-text-000000, #e8e6e3)
+										);
+									"
+									title="Administrator"
+									data-darkreader-inline-bgcolor=""
+									data-darkreader-inline-color=""
+								>
+									A
+								</div>
+							</span></span
+						>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu">
+						<a class="dropdown-item" href="/me" rel="nofollow"> My Account </a
+						><a class="dropdown-item" href="/?cmd=web_logout" rel="nofollow">
+							Log out </a
+						><a class="dropdown-item switch-to-desk" href="/app">Switch To Desk</a>
+						<a class="dropdown-item apps hidden" href="/apps">Apps</a>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link btn-login-area" href="/login" style="display: none"
+						>Login</a
+					>
+				</li>
+			</ul>
+			<a class="btn btn-primary navbar-cta" href="/available-books"> Book Now </a>
+		</div>
+		<div class="form-group mb-0 hide" id="language-switcher">
+			<select class="form-control"></select>
+		</div>
+	</div>
+</nav>

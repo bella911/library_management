@@ -1,0 +1,55 @@
+
+{%  extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container-fluid px-1 py-20 mx-auto">
+    <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            
+            <div class="card shadow">
+                <h5 class="card-title text-center mt-4 mb-4">Add Book</h5>
+                <form class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="fname" class="form-label">Title<span class="text-danger"> *</span></label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Enter book title" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lname" class="form-label">Author</label>
+                            <input type="text" class="form-control" id="author" name="author" placeholder="Enter book author" required>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">ISBN</label>
+                            <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Enter book isbn" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="mob" class="form-label">Publish Date</label>
+                            <input type="date" class="form-control" id="p_date" name="p_date" placeholder="Enter book publish date" required>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <label for="job" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="job" name="job" placeholder="Upload image" required>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-8">
+                        <div class="col-12">
+                            <label for="ans" class="form-label">Book Description</label>
+                            <textarea type="text" class="form-control" id="desc" name="desc" placeholder="Enter your answer" required> </textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end mt-4">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary w-100">Add Book</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
