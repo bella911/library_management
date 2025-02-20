@@ -1,33 +1,89 @@
-### Library Management
+# Instruction for setting up and running Library management app on frappe framework
 
-Library Management System
+This script used to steps to follow from create frappe app to running the app
 
-### Installation
+## Installation
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+If you haven't installed Bench. goto this link and follow installation guide https://docs.frappe.io/framework/v14/user/en/installation
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app library_management
-```
-
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+## Check bench install on your computer 
 
 ```bash
-cd apps/library_management
-pre-commit install
+bench --version
+5.23.0
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+## Create the frappe-bench directory
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+```bash
+bench init frappe-bench
+```
 
-### License
+## Move your directory from root to frappe-bench
 
-mit
+```bash
+cd frappe-bench
+```
+
+## Create Library Management App(from frappe-bench directory)
+
+```bash
+bench new-app library_management
+```
+
+## Insert information on the prompt 
+
+```bash
+App Title (default: Library Management):
+App Description: Library Management System
+App Publisher: Abel Gezahegn
+App Email: Abel@gmail.com
+App Icon (default 'octicon octicon-file-directory'):
+App Color (default 'grey'):
+App License (default 'MIT'):
+'library_management' created at /home/frappe/frappe-bench/apps/library_management
+
+Installing library_management
+bench build --app library_management
+```
+
+## Create a new site(from frappe-bench directory)
+```bash
+bench new-site library.localhost
+MySQL root password:
+Set Administrator password:
+```
+fill MySql root password or mariadb password depend form 
+"Remember" for the first time password is empty so press simply enter and set your password
+
+## Access site in your browser 
+port number and site address different depend on your choice
+
+```bash
+library.localhost:8000
+```
+
+## Install app on site(from frappe-bench directory)
+
+```bash
+bench --site library.localhost install-app library_management
+```
+
+# Initialize app for running frappe(from frappe-bench directory)
+
+## Starting Bench(from frappe-bench directory)
+while running bench application don't close or terminate terminal 
+
+```bash
+bench start 
+```
+
+# Starting database(from frappe-bench directory)
+This database command based on ubuntu on window(WSL) 
+
+```bash
+sudo service mariadb start
+```
+
+## Login to Desk 
+Goto website and paste "library.localhost:8000" and fill the username and password on frappe login page then starting your magic 🫡
